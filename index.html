@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="دعوة زفاف أبوحفص ونمارق - حفل زفاف سوداني فاخر وسينمائي">
+    <title>أبوحفص ♥ نمارق | دعوة زفاف سينمائية - السودان</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=El+Messiri:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Libraries CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black-luxury: #0D0D0D;
+            --gold: #D4AF37;
+            --gold-light: #F3E5AB;
+            --ivory: #F8F5F0;
+            --gold-glow: 0 0 20px rgba(212, 175, 55, 0.6);
+            --gold-glow-strong: 0 0 35px rgba(212, 175, 55, 0.8);
+        }
+
+        body {
+            background-color: var(--black-luxury);
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            color: var(--ivory);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .press-start-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 100%);
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .press-start-content {
+            text-align: center;
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { text-shadow: 0 0 10px var(--gold); }
+            50% { text-shadow: 0 0 30px var(--gold), 0 0 10px var(--gold); }
+        }
+
+        .press-start-title {
+            font-size: 3.5rem;
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-bottom: 30px;
+            letter-spacing: 6px;
+        }
+
+        .press-start-subtitle {
+            font-size: 1.3rem;
+            font-family: 'El Messiri', cursive;
+            color: var(--ivory);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .press-start-btn {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 15px 45px;
+            font-size: 1.3rem;
+            font-family: 'Cairo', sans-serif;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .press-start-btn:hover {
+            background: var(--gold);
+            color: var(--black-luxury);
+            box-shadow: var(--gold-glow-strong);
+            transform: scale(1.05);
+        }
+
+        .main-content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.5s ease, visibility 0s 1.5s;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1.5s ease, visibility 0s;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        section {
+            padding: 100px 5%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border-radius: 32px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.4), 0 0 15px rgba(212,175,55,0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 30px 55px rgba(0,0,0,0.5), 0 0 25px rgba(212,175,55,0.3);
+            transform: translateY(-5px);
+        }
+
+        .gold-text {
+            color: var(--gold);
+            text-shadow: var(--gold-glow);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, #B88A1A 100%);
+            border: none;
+            color: var(--black-luxury);
+            font-weight: bold;
+            padding: 14px 38px;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(212,175,55,0.4);
+        }
+
+        .btn-gold:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(212,175,55,0.7);
+        }
+
+        h2 {
+            font-family: 'Cinzel', 'El Messiri', serif;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2:after {
+            content: '✦';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 2rem;
+            text-shadow: var(--gold-glow);
+        }
+
+        .music-toggle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 1.8rem;
+            transition: all 0.4s ease;
+        }
+
+        .countdown-item {
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 28px;
+            padding: 30px 25px;
+            min-width: 130px;
+            text-align: center;
+            border: 1px solid var(--gold);
+            box-shadow: 0 0 20px rgba(212,175,55,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .countdown-item span {
+            font-size: 3.5rem;
+            font-family: 'Cinzel', monospace;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .timeline-card {
+            padding: 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .timeline-card:hover {
+            transform: translateX(15px);
+            border-color: var(--gold);
+        }
+
+        .timeline-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 28px;
+            transition: all 0.6s;
+        }
+
+        .swiper-slide-active .gallery-img {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(212,175,55,0.5);
+        }
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(212,175,55,0.1);
+            transform: translateX(-5px);
+        }
+
+        .contact-item i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            width: 40px;
+        }
+
+        .contact-item a {
+            color: var(--ivory);
+            text-decoration: none;
+            font-size: 1.1rem;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .bank-card {
+            background: rgba(0,0,0,0.5);
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(212,175,55,0.3);
+            transition: all 0.3s;
+        }
+
+        .bank-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212,175,55,0.3);
+        }
+
+        .bank-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+        }
+
+        .copy-btn {
+            background: var(--gold);
+            color: var(--black-luxury);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.05);
+            background: var(--gold-light);
+        }
+
+        .verse-box {
+            background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(0,0,0,0.4));
+            border-right: 4px solid var(--gold);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px auto;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .verse-text {
+            font-size: 1.5rem;
+            font-family: 'Amiri', 'El Messiri', serif;
+            line-height: 1.8;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+        }
+
+        .floating-flower {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: floatUp 6s linear forwards;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        @keyframes popupAnim {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+
+        .popup-notification {
+            animation: popupAnim 0.3s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 5%; }
+            h2 { font-size: 1.8rem; }
+            .countdown-item { padding: 15px; min-width: 70px; }
+            .countdown-item span { font-size: 1.5rem; }
+            .gallery-img { height: 250px; }
+            .press-start-title { font-size: 2rem; }
+            .contact-item a { font-size: 0.85rem; }
+            .verse-text { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Press Start Overlay -->
+<div class="press-start-overlay" id="pressStartOverlay">
+    <div class="press-start-content">
+        <div class="press-start-title">♡ أبوحفص & نمارق ♡</div>
+        <div class="press-start-subtitle" id="romanticTyped"></div>
+        <button class="press-start-btn" id="openInvitationMain">
+            <i class="fas fa-envelope-open-text"></i> افتح الدعوة
+        </button>
+    </div>
+</div>
+
+<div id="particles-js"></div>
+
+<div class="main-content" id="mainContent">
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <div style="min-height: 85vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+            <div class="glass-card" style="padding: 60px 50px; max-width: 850px; width: 90%;">
+                <h1 style="font-size: 3.5rem;" class="gold-text">أبوحفص ♡ نمارق</h1>
+                <div style="margin: 35px 0;">
+                    <i class="fas fa-heart" style="color: var(--gold); font-size: 2.2rem; margin: 0 15px; animation: pulse 1.5s infinite;"></i>
+                    <i class="fas fa-star-of-life" style="color: var(--gold); font-size: 2rem;"></i>
+                    <i class="fas fa-heart" style="color: var(--gold); font-size: 2.2rem; margin: 0 15px; animation: pulse 1.5s infinite;"></i>
+                </div>
+                <p style="font-size: 1.8rem; font-family: 'El Messiri';">"حين يجتمع القلبان… تبدأ الحكاية الأجمل"</p>
+                <div class="gold-text" style="font-size: 1.2rem; margin-top: 30px;">✦ 29 مايو 2026 ✦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quran Verse -->
+    <div class="verse-box" data-aos="fade-up">
+        <i class="fas fa-quran gold-text" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+        <div class="verse-text">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"</div>
+        <div class="gold-text" style="margin-top: 10px;">سورة الروم - الآية 21</div>
+    </div>
+
+    <!-- Couple Names -->
+    <section id="coupleNames" data-aos="fade-up">
+        <div style="text-align: center;">
+            <div class="glass-card" style="padding: 70px 40px; max-width: 950px; margin: 0 auto;">
+                <div class="gold-text" style="font-size: 1.3rem; letter-spacing: 6px;">بسم الله الرحمن الرحيم</div>
+                <h2 style="font-size: 4rem; text-shadow: var(--gold-glow-strong);" class="gold-text">أبوحفص<br><span style="font-size: 2rem;">&</span><br>نمارق</h2>
+                <div class="gold-text" style="font-size: 1.4rem;">✦ يتشرفان بدعوتكم لحفل زفافهما ✦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section id="countdown">
+        <h2 data-aos="fade-right">العد التنازلي للفرحة</h2>
+        <div class="glass-card" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; padding: 60px 30px; max-width: 1100px; margin: 0 auto;">
+            <div class="countdown-item"><span id="days">00</span> أيام</div>
+            <div class="countdown-item"><span id="hours">00</span> ساعات</div>
+            <div class="countdown-item"><span id="minutes">00</span> دقائق</div>
+            <div class="countdown-item"><span id="seconds">00</span> ثواني</div>
+        </div>
+    </section>
+
+    <!-- Love Story -->
+    <section id="story">
+        <h2 data-aos="fade-up">قصة حبنا</h2>
+        <div style="max-width: 950px; margin: 0 auto;">
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="glass-card timeline-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>أول لقاء</h3>
+                    <p>في الخرطوم، يوم 29 أكتوبر 2022، جمعتنا الصدفة الجميلة.</p>
+                    <small class="gold-text">الخرطوم - 29 أكتوبر 2022</small>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="glass-card timeline-card">
+                    <i class="fas fa-feather-alt"></i>
+                    <h3>بداية الحب</h3>
+                    <p>قصص لا تُنسى، ضحكات متواصلة، ومحادثات عميقة.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="glass-card timeline-card">
+                    <i class="fas fa-ring"></i>
+                    <h3>الخطوبة</h3>
+                    <p>في كسلا، شهر رمضان، يوم 29 مارس 2025.</p>
+                    <small class="gold-text">كسلا - 29 مارس 2025</small>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="glass-card timeline-card">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>الزفاف</h3>
+                    <p>الجمعة 29 مايو 2026، ريفي المسلمية - هزاواي.</p>
+                    <small class="gold-text">ولاية الجزيرة</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <h2 data-aos="fade-up">معرض ذكرياتنا</h2>
+        <div class="swiper gallerySwiper" style="border-radius: 32px; padding: 20px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=900&h=600&fit=crop');"></div><div style="text-align:center; margin-top:10px;">الخرطوم - التقاء النيلين</div></div>
+                <div class="swiper-slide"><div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=900&h=600&fit=crop');"></div><div style="text-align:center; margin-top:10px;">كسلا - جبال توتيل</div></div>
+                <div class="swiper-slide"><div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1600628421066-f745e1e9d28a?w=900&h=600&fit=crop');"></div><div style="text-align:center; margin-top:10px;">مدني - ولاية الجزيرة</div></div>
+                <div class="swiper-slide"><div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=900&h=600&fit=crop');"></div><div style="text-align:center; margin-top:10px;">المطبخ السوداني</div></div>
+                <div class="swiper-slide"><div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1590845947670-c009801ffa74?w=900&h=600&fit=crop');"></div><div style="text-align:center; margin-top:10px;">الضيافة السودانية</div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section id="details">
+        <h2 data-aos="fade-up">تفاصيل الحفل</h2>
+        <div class="glass-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 35px; padding: 50px; max-width: 1200px; margin:0 auto;">
+            <div><i class="fas fa-calendar-alt gold-text" style="font-size: 3rem;"></i><h3>التاريخ</h3><p>الجمعة<br>29 مايو 2026</p></div>
+            <div><i class="fas fa-clock gold-text" style="font-size: 3rem;"></i><h3>التوقيت</h3><p>قبل صلاة الجمعة<br>الساعة 12:00 مساءً</p></div>
+            <div><i class="fas fa-map-marker-alt gold-text" style="font-size: 3rem;"></i><h3>الموقع</h3><p>ولاية الجزيرة - ريفي المسلمية<br>قرية هزاواي - جوار مسجد هزاوي</p>
+                <button id="openMapBtn" class="btn-gold" style="margin-top:20px;"><i class="fab fa-google"></i> خرائط جوجل</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 data-aos="fade-up">التواصل</h2>
+        <div class="glass-card" style="max-width: 800px; margin: 0 auto; padding: 40px;">
+            <div class="contact-card">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+249965987972">+249965987972</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+249123718310">+249123718310</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+249923915072">+249923915072</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/249123718310" target="_blank">+249123718310 (واتساب)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribution Section -->
+    <section id="contribution">
+        <h2 data-aos="fade-up">المساهمة والهدايا</h2>
+        <div class="glass-card" style="max-width: 800px; margin: 0 auto; padding: 40px;">
+            
+            <div class="bank-card">
+                <h3><i class="fas fa-university gold-text"></i> بنكك</h3>
+                <div class="bank-info">
+                    <span><strong>رقم الحساب:</strong> 2656287</span>
+                    <button class="copy-btn" onclick="copyToClipboard('2656287', this)">نسخ</button>
+                </div>
+                <div class="bank-info">
+                    <span><strong>الاسم:</strong> أبوحفص الطاهر عبد الرحمن الطيب</span>
+                    <button class="copy-btn" onclick="copyToClipboard('أبوحفص الطاهر عبد الرحمن الطيب', this)">نسخ</button>
+                </div>
+            </div>
+            
+            <div class="bank-card">
+                <h3><i class="fas fa-mobile-alt gold-text"></i> فوري</h3>
+                <div class="bank-info">
+                    <span><strong>رقم فوري:</strong> 51170703</span>
+                    <button class="copy-btn" onclick="copyToClipboard('51170703', this)">نسخ</button>
+                </div>
+                <div class="bank-info">
+                    <span><strong>الاسم:</strong> أبوحفص الطاهر عبد الرحمن الطيب</span>
+                    <button class="copy-btn" onclick="copyToClipboard('أبوحفص الطاهر عبد الرحمن الطيب', this)">نسخ</button>
+                </div>
+            </div>
+            
+            <div class="bank-card">
+                <h3><i class="fas fa-mobile-alt gold-text"></i> أوكاش</h3>
+                <div class="bank-info">
+                    <span><strong>رقم أوكاش:</strong> 0897666</span>
+                    <button class="copy-btn" onclick="copyToClipboard('0897666', this)">نسخ</button>
+                </div>
+                <div class="bank-info">
+                    <span><strong>الاسم:</strong> أبوحفص الطاهر عبد الرحمن الطيب</span>
+                    <button class="copy-btn" onclick="copyToClipboard('أبوحفص الطاهر عبد الرحمن الطيب', this)">نسخ</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h3 style="margin-bottom: 20px;">نموذج المساهمة</h3>
+                <input type="text" id="contributorName" class="contribution-input" placeholder="الاسم الكريم" style="width:100%; padding:16px 20px; margin-bottom:20px; background:rgba(255,255,255,0.08); border:1px solid var(--gold); border-radius:50px; color:var(--ivory);">
+                <input type="number" id="contributorAmount" class="contribution-input" placeholder="المبلغ" min="1" style="width:100%; padding:16px 20px; margin-bottom:20px; background:rgba(255,255,255,0.08); border:1px solid var(--gold); border-radius:50px; color:var(--ivory);">
+                <button id="sendContributionBtn" class="btn-gold" style="width:100%;">
+                    <i class="fab fa-whatsapp"></i> تأكيد المساهمة عبر واتساب
+                </button>
+                <p id="contributionMsg" style="margin-top: 15px; text-align:center; color: var(--gold); font-size:0.9rem;"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 60px 20px; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+        <i class="fas fa-heart" style="color: var(--gold); font-size: 2rem; margin-bottom: 20px;"></i>
+        <p style="font-size: 2rem; font-family:'El Messiri';">ننتظركم بكل الحب ❤️</p>
+        <p style="font-size: 1rem; opacity: 0.7; margin-top: 20px;">&copy; 2026 أبوحفص & نمارق - ولاية الجزيرة، السودان</p>
+    </footer>
+</div>
+
+<!-- Audio - تشغيل أغنية حلم سنين من الملف المحلي -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="helmsneen.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-toggle" id="musicToggle">
+    <i class="fas fa-music"></i>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+    // Typed.js
+    new Typed('#romanticTyped', {
+        strings: ['✨ قصة حب سودانية ✨', '♥ أبوحفص و نمارق ♥', '★ أهلاً وسهلاً ★', '🌸 يافرحة ما تخلصي 🌸', '🎵 كل عام وأنتم بخير 🎵'],
+        typeSpeed: 55,
+        backSpeed: 35,
+        backDelay: 2000,
+        loop: true,
+        cursorChar: '|'
+    });
+
+    // Particles
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 100, density: { enable: true, value_area: 800 } },
+            color: { value: '#D4AF37' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: true },
+            size: { value: 2, random: true },
+            line_linked: { enable: true, distance: 120, color: '#D4AF37', opacity: 0.15 },
+            move: { enable: true, speed: 2, direction: 'none', random: true }
+        },
+        interactivity: {
+            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
+        }
+    });
+
+    AOS.init({ duration: 1000, once: false, mirror: true, offset: 100 });
+
+    // Countdown
+    function updateCountdown() {
+        const weddingDate = new Date(2026, 4, 29, 12, 0, 0);
+        const now = new Date();
+        const diff = weddingDate - now;
+        
+        if (diff <= 0) {
+            document.getElementById('days').innerHTML = '00';
+            document.getElementById('hours').innerHTML = '00';
+            document.getElementById('minutes').innerHTML = '00';
+            document.getElementById('seconds').innerHTML = '00';
+            return;
+        }
+        
+        document.getElementById('days').innerHTML = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById('hours').innerHTML = Math.floor((diff % 86400000) / 3600000);
+        document.getElementById('minutes').innerHTML = Math.floor((diff % 3600000) / 60000);
+        document.getElementById('seconds').innerHTML = Math.floor((diff % 60000) / 1000);
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    
+    // Swiper Gallery
+    new Swiper('.gallerySwiper', {
+        loop: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        spaceBetween: 30,
+        slidesPerView: 1,
+        breakpoints: { 768: { slidesPerView: 2 } }
+    });
+    
+    // ========== تشغيل أغنية حلم سنين من الملف المحلي ==========
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    let isMusicPlaying = false;
+    
+    // ضبط مستوى الصوت
+    bgMusic.volume = 0.4;
+    
+    // التحقق من وجود الملف
+    bgMusic.addEventListener('error', function() {
+        console.error('❌ خطأ: ملف helmsneen.mp3 غير موجود في نفس المجلد');
+        musicToggle.style.border = '2px solid #ff0000';
+    });
+    
+    bgMusic.addEventListener('canplaythrough', function() {
+        console.log('✅ أغنية حلم سنين جاهزة للتشغيل');
+        musicToggle.style.border = '1px solid var(--gold)';
+    });
+    
+    function playMusic() {
+        const playPromise = bgMusic.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                isMusicPlaying = true;
+                musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+                console.log('✅ يتم تشغيل أغنية حلم سنين الآن');
+            }).catch(error => {
+                console.log('❌ فشل التشغيل:', error);
+                isMusicPlaying = false;
+                musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            });
+        }
+    }
+    
+    function pauseMusic() {
+        bgMusic.pause();
+        isMusicPlaying = false;
+        musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+    }
+    
+    // زر التحكم في الموسيقى
+    musicToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isMusicPlaying) {
+            pauseMusic();
+        } else {
+            playMusic();
+        }
+    });
+    
+    // Floating flowers
+    function createFloatingFlower() {
+        const flower = document.createElement('div');
+        const flowersList = ['🌹', '🌸', '✨', '💫', '🌺', '🥀', '💐', '🌼', '⭐', '🕊️', '❤️', '💕'];
+        flower.innerHTML = flowersList[Math.floor(Math.random() * flowersList.length)];
+        flower.classList.add('floating-flower');
+        flower.style.left = Math.random() * 100 + '%';
+        flower.style.fontSize = (Math.random() * 25 + 20) + 'px';
+        flower.style.opacity = Math.random() * 0.8 + 0.2;
+        document.body.appendChild(flower);
+        setTimeout(() => flower.remove(), 6000);
+    }
+    
+    // Popup messages
+    const pressStartOverlay = document.getElementById('pressStartOverlay');
+    const mainContent = document.getElementById('mainContent');
+    const openBtn = document.getElementById('openInvitationMain');
+    
+    const popupMessages = [
+        "✨ ألف مبروك مقدماً ✨",
+        "🌸 الله يتمملكم على خير 🌸",
+        "💑 كل عام وأنتم بخير 💑",
+        "🎉 فرحة سعيدة إن شاء الله 🎉",
+        "🌹 عقبالكم يا رب 🌹",
+        "💕 يافرحة ما تخلصي 💕",
+        "🌟 جعلها الله عرساً مباركاً 🌟",
+        "🥁 الله يبارك فيكم 🥁",
+        "🎵 حلم سنين بدأ يتحقق 🎵"
+    ];
+    
+    let activePopups = 0;
+    const maxConcurrentPopups = 2;
+    
+    function showPopupMessage() {
+        if (activePopups >= maxConcurrentPopups) return;
+        
+        const msg = popupMessages[Math.floor(Math.random() * popupMessages.length)];
+        const popup = document.createElement('div');
+        popup.innerHTML = msg;
+        popup.className = 'popup-notification';
+        popup.style.position = 'fixed';
+        popup.style.top = (30 + (activePopups * 70)) + '%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.background = 'rgba(0,0,0,0.95)';
+        popup.style.color = 'var(--gold)';
+        popup.style.padding = '12px 25px';
+        popup.style.borderRadius = '50px';
+        popup.style.border = '2px solid var(--gold)';
+        popup.style.fontSize = '1.2rem';
+        popup.style.fontFamily = 'El Messiri, cursive';
+        popup.style.zIndex = '10001';
+        popup.style.boxShadow = '0 0 40px rgba(212,175,55,0.6)';
+        popup.style.whiteSpace = 'nowrap';
+        popup.style.fontWeight = 'bold';
+        document.body.appendChild(popup);
+        activePopups++;
+        
+        setTimeout(() => {
+            popup.style.opacity = '0';
+            popup.style.transition = 'opacity 0.5s';
+            setTimeout(() => {
+                popup.remove();
+                activePopups--;
+            }, 500);
+        }, 2000);
+    }
+    
+    openBtn.addEventListener('click', () => {
+        // عرض الرسائل المنبثقة
+        const popupInterval = setInterval(() => {
+            if (activePopups < maxConcurrentPopups) {
+                showPopupMessage();
+            }
+        }, 800);
+        
+        setTimeout(() => clearInterval(popupInterval), 6000);
+        
+        pressStartOverlay.style.opacity = '0';
+        setTimeout(() => {
+            pressStartOverlay.style.display = 'none';
+            mainContent.classList.add('visible');
+            
+            gsap.fromTo('.main-content', 
+                { clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' },
+                { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', duration: 1.5, ease: 'power3.inOut' }
+            );
+            
+            for(let i = 0; i < 50; i++) {
+                setTimeout(() => createFloatingFlower(), i * 80);
+            }
+            
+            // تشغيل أغنية حلم سنين بعد فتح الدعوة
+            setTimeout(() => {
+                playMusic();
+            }, 500);
+            
+            gsap.to('#hero .glass-card', { 
+                boxShadow: '0 0 50px rgba(212,175,55,0.6)',
+                duration: 2, repeat: -1, yoyo: true
+            });
+        }, 800);
+    });
+    
+    // Google Maps
+    document.getElementById('openMapBtn').addEventListener('click', () => {
+        window.open('https://www.google.com/maps/search/?api=1&query=Hazawei+Al+Jazirah+Sudan', '_blank');
+    });
+    
+    // Copy to clipboard
+    window.copyToClipboard = function(text, button) {
+        navigator.clipboard.writeText(text).then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = '✓ تم النسخ';
+            setTimeout(() => {
+                button.innerHTML = originalText;
+            }, 2000);
+        });
+    };
+    
+    // Contribution
+    const sendContributionBtn = document.getElementById('sendContributionBtn');
+    const contributorName = document.getElementById('contributorName');
+    const contributorAmount = document.getElementById('contributorAmount');
+    const contributionMsg = document.getElementById('contributionMsg');
+    
+    sendContributionBtn.addEventListener('click', () => {
+        const name = contributorName.value.trim();
+        const amount = contributorAmount.value.trim();
+        
+        if(!name || !amount) {
+            contributionMsg.innerHTML = '❌ الرجاء إدخال الاسم والمبلغ';
+            contributionMsg.style.opacity = '1';
+            setTimeout(() => { contributionMsg.style.opacity = '0'; }, 3000);
+            return;
+        }
+        
+        const message = `السلام عليكم، أنا ${name}، أرغب في المساهمة بمبلغ ${amount} جنيه سوداني بمناسبة زفاف أبوحفص ونمارق.`;
+        const phoneNumber = '249123718310';
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        
+        window.open(whatsappUrl, '_blank');
+        
+        contributionMsg.innerHTML = '✨ تم توجيهك إلى واتساب لإرسال إيصال الدفع ✨';
+        contributionMsg.style.opacity = '1';
+        contributorName.value = '';
+        contributorAmount.value = '';
+        setTimeout(() => { contributionMsg.style.opacity = '0'; }, 4000);
+    });
+    
+    // Continuous floating effects
+    setInterval(() => {
+        if(mainContent.classList.contains('visible')) {
+            createFloatingFlower();
+        }
+    }, 3500);
+</script>
+
+</body>
+</html>
